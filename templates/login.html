@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Login {% endblock title %}
+
+
+{% block content %}
+{% if error_message %}
+<div class="ui red message">
+    <i class="close icon"></i>
+    <div class="header">
+        {{ error_message }}
+    </div>
+   
+  </div>
+
+{% endif %}
+    <form action="" method="POST" class="ui form">
+        {% csrf_token %}
+        {{form}}
+        <div class="block-center">
+        <button type="submit" class="ui positive button mtop">Log-in</button>
+        <br/><br/>
+        <p>Don't have an account?<a href="/register">register</a></p>
+    </div>
+    </form>
+
+
+
+{% endblock content %}

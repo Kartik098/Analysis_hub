@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href={% static 'style.css' %}>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    
+    <title>DJ PD PROJ -{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="ui container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    <script type="text/javascript" src={% static 'main.js' %}></script>
+</body>
+</html>

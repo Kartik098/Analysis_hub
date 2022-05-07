@@ -1,0 +1,26 @@
+table{
+    margin: 0 auto;
+}
+.mymodal {
+    height: 400px !important;
+    top: 200px !important;
+    font-size: 20px !important;
+}
+ul li{
+    margin: 0 0 10px 0;
+}
+.ui.button{
+    width: 200px !important;
+    border-radius: 0px !important;
+}
+.block-center{
+    text-align: center !important;
+}
+.form .field-width{
+    width: 100% !important;
+}
+.mtop{
+    margin-top: 20px !important;
+   
+    border-radius: 10px !important;
+}

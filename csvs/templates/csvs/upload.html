@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Upload csv {% endblock title %}
+
+
+{% block content %}
+{% if success_message %}
+    <div class="ui success message">
+        <div class="header">
+            {{ success_message }}
+        </div>
+    <i class="close icon"></i>
+        </div> 
+    {% endif %}
+    {% if error_message %}
+    <div class="ui red message"><div class="header">{{ error_message }}</div>
+    <i class="close icon"></i>
+        </div> 
+    {% endif %}
+<form action="" method="POST" enctype="multipart/form-data" class="ui form">
+    {% csrf_token %}
+    {{ form }}
+    <div class="block-center">
+        <button type="submit" class="ui positive button mtop">Add data</button>
+    </div>
+
+</form>
+
+{% endblock content %}

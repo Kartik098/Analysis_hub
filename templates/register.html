@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Register {% endblock title %}
+
+
+{% block content %}
+<h1>Register</h1>
+
+    <form action="" method="POST" class="ui form">
+        {% csrf_token %}
+        {{form}}
+        <div class="block-center">
+        <button type="submit" class="ui positive button mtop">Register</button>
+        <br/><br/>
+        <p>Already have an account?<a href="/login">Login</a></p>
+            </div>
+
+
+{% endblock content %}
